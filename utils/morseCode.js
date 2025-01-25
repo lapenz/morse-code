@@ -103,7 +103,7 @@ export const startListening = (onDecodedCallback) => {
     let microphone = null;
 
     navigator.mediaDevices
-        .getUserMedia({ audio: true })
+        .getUserMedia({audio: true})
         .then((stream) => {
             microphone = audioContext.createMediaStreamSource(stream);
             microphone.connect(analyser);
@@ -153,7 +153,6 @@ export const startListening = (onDecodedCallback) => {
                         currentSymbol = "";
                     }
 
-                    console.log(pauseDuration, wordPauseThreshold)
                     if (pauseDuration > wordPauseThreshold && decodedMessage.trim().length > 0) {
                         // Add space for a new word if we are between two valid words
                         if (!decodedMessage.endsWith(" ")) {
