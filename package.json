@@ -2,7 +2,6 @@
   "name": "morse-code",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://lapenz.github.io/morse-code",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
