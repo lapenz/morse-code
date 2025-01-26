@@ -92,7 +92,7 @@ export const startListening = (onDecodedCallback) => {
     const analyser = audioContext.createAnalyser();
     analyser.fftSize = 2048;  // Size of the frequency data (controls accuracy)
     const dataArray = new Uint8Array(analyser.frequencyBinCount);
-    const frequencyThreshold = 0.78;  // Minimum magnitude to detect tone
+    const frequencyThreshold = 0.7;  // Minimum magnitude to detect tone
 
     let isTone = false;
     let currentSymbol = "";

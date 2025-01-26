@@ -62,14 +62,19 @@ export default function Home() {
                         isListening ? "bg-red-600 hover:bg-red-700" : "bg-purple-600 hover:bg-purple-700"
                     } text-white rounded-md shadow-md transition`}
                 >
-                    {isListening ? "Stop Listening" : "Start Listening"}
+                    {isListening ? "Stop Decoding" : "Start Decoding"}
                 </button>
             </div>
 
             <h2 className="text-2xl text-black font-semibold mt-6">Morse Code Output:</h2>
-            <pre className="bg-white text-lg text-black p-4 rounded-md border-2 border-gray-300 shadow-md max-w-xl w-full mt-4">
-        {morse}
-      </pre>
+            <textarea
+                value={morse}
+                readOnly={true}
+                rows={5}
+                cols={50}
+                placeholder="Morse coded text will be displayed here..."
+                className="resize-none p-4 border-2 border-gray-300 rounded-md shadow-md mb-4 text-black text-lg w-full max-w-xl"
+            />
         </div>
     );
 }
